@@ -1,0 +1,58 @@
+{
+    "type": "object",
+    "properties": {
+      "isbn": {
+        "type": "string",
+        "pattern": "^[0-9-]+$",
+        "description": "The ISBN of the book, typically a string of numbers and dashes"
+      },
+      "amazon_url": {
+        "type": "string",
+        "format": "uri",
+        "description": "A valid URL pointing to the book's Amazon page"
+      },
+      "author": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The author of the book"
+      },
+      "language": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The language the book is written in"
+      },
+      "pages": {
+        "type": "integer",
+        "minimum": 1,
+        "description": "The number of pages in the book"
+      },
+      "publisher": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The publisher of the book"
+      },
+      "title": {
+        "type": "string",
+        "minLength": 1,
+        "description": "The title of the book"
+      },
+      "year": {
+        "type": "integer",
+        "minimum": 0,
+        "maximum": 9999,
+        "description": "The publication year of the book, as a four-digit integer"
+      }
+    },
+    "required": [
+      "isbn",
+      "amazon_url",
+      "author",
+      "language",
+      "pages",
+      "publisher",
+      "title",
+      "year"
+    ],
+    "additionalProperties": false
+  }
+  
